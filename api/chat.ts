@@ -165,8 +165,8 @@ export default async function handler(req: IncomingMessage & { body?: any }, res
     }
   };
 
-  // Attempt using modern gemini-2.5-flash, fallback to gemini-1.5-flash
-  const models = ['gemini-2.5-flash', 'gemini-1.5-flash'];
+  // Attempt using modern 2026 Gemini Flash models: gemini-3.5-flash with fallbacks
+  const models = ['gemini-3.5-flash', 'gemini-3.5-flash-lite', 'gemini-3.8-flash', 'gemini-flash-latest'];
   let lastError = '';
 
   for (const model of models) {
